@@ -1,0 +1,23 @@
+﻿@model List<Exercise4.Models.CharacterViewModel>
+
+<h1>Characters</h1>
+<p>This is the index page of the character Controller</p>
+
+<h1>Character</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var character in Model)
+        {
+            <tr>
+                <td>@character.name</td>
+                <td>@character.city</td>
+            </tr>
+        }
+    </tbody>
+</table>

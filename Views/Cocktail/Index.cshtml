@@ -1,0 +1,24 @@
+﻿@model List<Exercise4.Models.CocktailViewModel>
+
+<h1>Cocktails</h1>
+<p>This is the index page of the cocktail controller</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Picture</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cocktail in Model)
+        {
+            <tr>
+                <td>@cocktail.idDrink</td>
+                <td>@cocktail.strDrink</td>
+                <td><img src="@cocktail.strDrinkThumb" width="100" height="100" /></td>
+            </tr>
+        }
+    </tbody>
+</table>
